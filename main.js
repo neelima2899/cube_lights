@@ -134,8 +134,12 @@ function main() {
       activePoint = null;  // Stop moving any point after releasing the mouse
   
       // Turn off the lights when the mouse is released
-      pointLight1.intensity = 0;
-      pointLight2.intensity = 0;
+      if(clickedPoint===point1){
+       pointLight1.intensity=20;
+      }
+      else if(clickedPoint===point2){
+        pointLight2.intensity=20;
+      }
     }
   
     // Attach the event listeners for mouse movements and clicks
@@ -153,4 +157,5 @@ function main() {
   }
   
   main();
+  
   
